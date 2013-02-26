@@ -10,7 +10,7 @@ public class Product {
     private String prodName;
     private double unitCost;
     private DiscountStrategy discount;
-    private FakeDataBase productInfo;
+   
     
 
     public Product(String prodId, String prodName, double unitCost, DiscountStrategy discount) {
@@ -64,10 +64,7 @@ public class Product {
     
     
     
-    
-    public String getProductInfo(){
-        return productInfo.queryDatabase(prodId);
-    }
+  
     
     
     
@@ -84,10 +81,10 @@ public class Product {
     
     public static void main(String[] args) {
        
-             Product product = new Product("1234", "name", 10.00, new FixedRateDiscount());
-             DiscountStrategy disc = new FixedRateDiscount();
+             Product product = new Product("1234", "name", 10.00, new FixedRateDiscount(.2));
+           DiscountStrategy disc = new FixedRateDiscount(.2);
              
-             disc.setDiscount(.20);
+            disc.setDiscount(.3);
              
              double amt = product.getDiscount(3);
              

@@ -6,7 +6,9 @@ public class FixedRateDiscount implements DiscountStrategy {
     private double discountAmt;
 
  
-    
+    public FixedRateDiscount(double discount){
+        this.discount = discount;
+    }
 
 
     @Override
@@ -31,12 +33,6 @@ public class FixedRateDiscount implements DiscountStrategy {
    }
    
    
-    
-    public static void main(String[] args) {
-        FixedRateDiscount fra = new FixedRateDiscount();
-        double discount = fra.getDiscountAmount(3,100.00);
-        
-        System.out.println(discount);
-    }
+
     
 }

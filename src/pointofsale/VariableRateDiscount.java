@@ -12,11 +12,16 @@ public class VariableRateDiscount implements DiscountStrategy{
         private double discount = .1;
     private int minQty = 2;
     private double discountAmt;
+    private int qty;
 
  
+    public VariableRateDiscount(double discount, int qty){
+        this.discount = discount;
+        this.qty = qty;
+    }
     
-
-
+    
+   
     @Override
     public void setDiscount(double discount) {
         this.discount = discount;
@@ -35,6 +40,11 @@ public class VariableRateDiscount implements DiscountStrategy{
         this.minQty = minQty;
     }
     
+    
+    
+    
+    
+    
 
     @Override
    public double getDiscountAmount(int qty, double unitCost){
@@ -48,11 +58,6 @@ public class VariableRateDiscount implements DiscountStrategy{
    
    
     
-    public static void main(String[] args) {
-        FixedRateDiscount fra = new FixedRateDiscount();
-        double discount = fra.getDiscountAmount(3,100.00);
-        
-        System.out.println(discount);
-    }
+   
     
 }

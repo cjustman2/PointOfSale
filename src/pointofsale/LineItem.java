@@ -9,13 +9,14 @@ package pointofsale;
  * @author chris
  */
 public class LineItem {
-    private String productInfo;
+    private FakeDataBase productInfo;
+   
     
     
+    /*public String findProduct(String prodId){
+    return productInfo.findProduct(prodId);
+    }*/
     
-    public String getProductInfo(){
-    return productInfo;
-    }
     
     
     
