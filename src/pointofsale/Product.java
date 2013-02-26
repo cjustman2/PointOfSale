@@ -66,16 +66,17 @@ public class Product {
     
     public static void main(String[] args) {
        
-            Product product = new Product("1234", "name", 10.00, new VariableRateDiscount());
-           
-             FixedRateDiscount disc = new FixedRateDiscount();
+             Product product = new Product("1234", "name", 10.00, new FixedRateDiscount());
+             //VariableRateDiscount disc = new VariableRateDiscount();
              
-       disc.setDiscount(.10);
+             //disc.setDiscount(.20);
+             
+             double amt = product.getDiscount(3);
+             
+             
         
-            double amt = product.getDiscount(3);
-        
-   System.out.println(amt);
-        System.out.println(disc.getDiscount());
+        System.out.println(amt);
+       // System.out.println(disc.getDiscount());
           
     }
     

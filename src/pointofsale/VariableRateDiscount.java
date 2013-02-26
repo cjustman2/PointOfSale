@@ -9,7 +9,7 @@ package pointofsale;
  * @author chris
  */
 public class VariableRateDiscount implements DiscountStrategy{
-        private double discount;
+        private double discount = .1;
     private int minQty = 2;
     private double discountAmt;
 
