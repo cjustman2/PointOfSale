@@ -41,7 +41,7 @@ public class Customer {
     
     
     
-    public String findCustomer(String custId){
+    public Customer findCustomer(String custId){
         return customerInfo.findCustomer(custId);
     }
     

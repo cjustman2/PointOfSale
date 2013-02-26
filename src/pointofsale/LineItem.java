@@ -9,13 +9,23 @@ package pointofsale;
  * @author chris
  */
 public class LineItem {
-    private FakeDataBase productInfo;
+    private Product product;
+    private int qty;
    
-    
-    
-    public String findProduct(String prodId){
-    return productInfo.findProduct(prodId);
+    public LineItem(String prodId, int qty) {
+        FakeDataBase db = new FakeDataBase();
+       product = db.findProduct(prodId);
     }
+    
+    
+    
+    public double getOrigPriceSubtotal() {
+        return product.getUnitCost() * qty;
+    }
+    
+   /* public String findProduct(String prodId){
+    return productInfo.findProduct(prodId);
+    }*/
     
     
     
