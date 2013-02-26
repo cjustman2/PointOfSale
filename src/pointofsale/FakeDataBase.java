@@ -10,7 +10,11 @@ package pointofsale;
  */
 public class FakeDataBase {
   
-   
+                 private Customer[] customers = {
+	        new Customer("100", "John Smith"),
+	        new Customer("200", "Sally Jones"),
+	        new Customer("300", "Bob Clementi")
+	    };
     
     
        Product[] products = {
@@ -33,6 +37,20 @@ public class FakeDataBase {
 	        }
 
 	        return product;
+	    }
+      
+      
+          public final Customer findCustomer(final String custId) {
+	        // validation is needed
+	        Customer customer = null;
+	        for(Customer c : customers) {
+	            if(custId.equals(c.getCustId())) {
+	                customer = c;
+	                break;
+	            }
+	        }
+
+	        return customer;
 	    }
     
 }

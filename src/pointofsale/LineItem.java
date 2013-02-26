@@ -13,9 +13,9 @@ public class LineItem {
    
     
     
-    /*public String findProduct(String prodId){
+    public String findProduct(String prodId){
     return productInfo.findProduct(prodId);
-    }*/
+    }
     
     
     

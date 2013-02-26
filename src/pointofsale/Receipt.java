@@ -9,5 +9,14 @@ package pointofsale;
  * @author chris
  */
 public class Receipt {
+    private String custId;
+    private Customer customer;
+    private LineItem lineItem;
+    
+    
+    
+    
+    
+    
     
 }
