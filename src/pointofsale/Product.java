@@ -10,6 +10,8 @@ public class Product {
     private String prodName;
     private double unitCost;
     private DiscountStrategy discount;
+    private FakeDataBase productInfo;
+    
 
     public Product(String prodId, String prodName, double unitCost, DiscountStrategy discount) {
         this.prodId = prodId;
@@ -60,23 +62,39 @@ public class Product {
     
     
     
+    
+    
+    
+    public String getProductInfo(){
+        return productInfo.queryDatabase(prodId);
+    }
+    
+    
+    
+    
     public double getDiscount(int qty){
         return discount.getDiscountAmount(qty, unitCost);
     }
     
+    
+    
+    
+    
+    
+    
     public static void main(String[] args) {
        
              Product product = new Product("1234", "name", 10.00, new FixedRateDiscount());
-             //VariableRateDiscount disc = new VariableRateDiscount();
+             DiscountStrategy disc = new FixedRateDiscount();
              
-             //disc.setDiscount(.20);
+             disc.setDiscount(.20);
              
              double amt = product.getDiscount(3);
              
              
         
         System.out.println(amt);
-       // System.out.println(disc.getDiscount());
+        System.out.println(disc.getDiscount());
           
     }
     

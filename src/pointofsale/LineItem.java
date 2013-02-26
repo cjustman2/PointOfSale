@@ -9,6 +9,23 @@ package pointofsale;
  * @author chris
  */
 public class LineItem {
+    private String productInfo;
     
+    
+    
+    public String getProductInfo(){
+    return productInfo;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    public static void main(String[] args) {
+        
+    }
     
 }

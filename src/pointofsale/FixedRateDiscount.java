@@ -2,7 +2,7 @@
 package pointofsale;
 
 public class FixedRateDiscount implements DiscountStrategy {
-    private double discount = .2;
+    private double discount = .1;
     private double discountAmt;
 
  

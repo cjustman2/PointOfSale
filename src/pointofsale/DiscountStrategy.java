@@ -10,10 +10,10 @@ package pointofsale;
  */
 public interface DiscountStrategy {
 
-    double getDiscount();
+    public abstract double getDiscount();
 
-    double getDiscountAmount(int qty, double unitCost);
+    public abstract double getDiscountAmount(int qty, double unitCost);
 
-    void setDiscount(double discount);
+    public abstract void setDiscount(double discount);
     
 }
