@@ -4,6 +4,9 @@
  */
 package pointofsale;
 
+import java.text.SimpleDateFormat;
+import java.util.*;
+
 /**
  *
  * @author chris
@@ -13,12 +16,29 @@ public class Receipt {
     private LineItem[] lineItems = new LineItem[0];
     
     
+    
+     String format = "MM/dd/yyyy hh:mm a";
+        SimpleDateFormat sdf = new SimpleDateFormat(format);
+        Date date = new Date();
+        //Calendar c = Calendar.getInstance();
+         //c = Calendar.getInstance();
+        //date = c.getTime();
+        // Now format the date object as a String
+        String formattedDate = sdf.format(date);
+    
 
     public Receipt(String custId) {
        FakeDataBase db = new FakeDataBase();
        customer = db.findCustomer(custId);
     }
     
+    public void outputReceipt(){
+        System.out.println("Thanks for shopping with us. \n\n " + customer.getCustName() + 
+                "\n\n" + date + "\n\n ");
+        for(int i = 0; i < lineItems.length; i++){
+            System.out.println(lineItems[i].getProductName());
+        }
+    }
     
     
     public void addItemToSale(String prodId, int qty) {
@@ -51,9 +71,12 @@ public class Receipt {
     
     
     public static void main(String[] args) {
-        Receipt receipt = new Receipt("100");
+        Receipt receipt = new Receipt("200");
+        receipt.outputReceipt();
+        receipt.addItemToSale("A101", 2);
+        receipt.addItemToSale("C222", 3);
        
-        System.out.println(receipt);
+       
     }
     
     

@@ -23,20 +23,9 @@ public class LineItem {
         return product.getUnitCost() * qty;
     }
     
-   /* public String findProduct(String prodId){
-    return productInfo.findProduct(prodId);
-    }*/
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    public static void main(String[] args) {
-        
+ 
+    public String getProductName(){
+        return product.getProdName();
     }
     
 }
