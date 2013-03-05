@@ -9,5 +9,10 @@ package pointofsale;
  * @author chris
  */
 public class CashRegister {
+    private Receipt receipt;
     
+    
+    public CashRegister(){
+        
+    }
 }

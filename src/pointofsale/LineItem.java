@@ -32,4 +32,8 @@ public class LineItem {
         return product.getUnitCost();
     }
     
+    public DiscountStrategy getDiscount(){
+        return product.getDiscount();
+    }
+    
 }

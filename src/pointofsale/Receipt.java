@@ -33,10 +33,12 @@ public class Receipt {
     }
     
     public void outputReceipt(){
-        System.out.println("Thanks for shopping with us. \n\n " + customer.getCustName() + 
+        System.out.println("Thanks for shopping with us. " + customer.getCustName() + 
                 "\n\n" + date + "\n\n ");
+        
         for(int i = 0; i < lineItems.length; i++){
-            System.out.println(lineItems[i].getProductName());
+            System.out.println(lineItems[i].getProductName() + lineItems[i].getUnitCost() +
+                    lineItems[i].getDiscount() + getTotalBeforeDiscount());
         }
     }
     
