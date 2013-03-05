@@ -16,6 +16,10 @@ public class LineItem {
         FakeDataBase db = new FakeDataBase();
        product = db.findProduct(prodId);
     }
+
+    public int getQty() {
+        return qty;
+    }
     
     
     

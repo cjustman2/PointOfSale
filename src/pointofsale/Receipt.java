@@ -37,8 +37,8 @@ public class Receipt {
                 "\n\n" + date + "\n\n ");
         
         for(int i = 0; i < lineItems.length; i++){
-            System.out.println(lineItems[i].getProductName() + ",  " + lineItems[i].getUnitCost() + ",  " +  lineItems[i].getOrigPriceSubtotal() +
-                    ",  " + lineItems[i].getDiscount());
+            System.out.println(lineItems[i].getProductName() + ",  " + lineItems[i].getUnitCost() + ",  " +  ",  " + 
+                    lineItems[i].getQty() + ",  " + lineItems[i].getOrigPriceSubtotal() + ",  " + lineItems[i].getDiscount());
         }
        getTotalBeforeDiscount(); 
     }
