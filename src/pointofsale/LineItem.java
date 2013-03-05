@@ -28,4 +28,8 @@ public class LineItem {
         return product.getProdName();
     }
     
+    public double getUnitCost(){
+        return product.getUnitCost();
+    }
+    
 }
